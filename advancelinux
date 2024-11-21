@@ -1,0 +1,54 @@
+service --status-all
+Purpose: Displays the status of all services on a system.
+How it works:
+It lists all the services managed by the system’s init system (like SysVinit or Upstart).
+The list includes a "+" sign for running services and a "-" for stopped services.
+Usage: Useful for checking which services are running or stopped.
+2. sudo service sendmail
+Purpose: Manages the sendmail service, which is used for sending emails.
+How it works:
+With sudo, it provides administrative privileges required to manage services.
+You can use commands like:
+sudo service sendmail start - Start the sendmail service.
+sudo service sendmail stop - Stop the sendmail service.
+sudo service sendmail restart - Restart the sendmail service.
+If used without an additional argument, it might display usage instructions or status (depending on the system).
+3. ps
+Purpose: Displays information about active processes.
+How it works:
+Without options, it shows processes running in the current shell.
+Usage: Useful for quickly checking what is running.
+4. ps -u
+Purpose: Displays processes of a specific user.
+How it works:
+Lists all processes owned by the specified user (you may need to provide the username, e.g., ps -u root).
+Usage: Helps monitor processes associated with a particular user.
+5. ps -a
+Purpose: Shows processes for all users except session leaders.
+How it works:
+Displays all processes in the current terminal excluding session leaders (typically the terminal itself).
+Usage: Helpful for multi-user environments to view others' processes.
+6. ps -l
+Purpose: Displays detailed information about processes in long format.
+How it works:
+Includes additional details like priority, process ID (PID), parent process ID (PPID), nice value, etc.
+Usage: Useful for debugging and performance analysis of processes.
+7. cat >> abc
+Purpose: Appends input from the terminal to the file abc.
+How it works:
+cat reads from standard input.
+The >> operator appends the input to an existing file or creates the file if it doesn’t exist.
+After running cat >> abc, you can type your input. To save and exit, press Ctrl+D.
+Usage: Useful for adding content to a file interactively.
+8)iotop
+
+Displays real-time disk I/O usage by processes.
+Useful for identifying processes causing high disk activity.
+9)nice and renice
+
+Adjusts the priority of a process.
+Example: nice -n 10 command starts a command with a lower priority.
+10)strace
+
+Traces system calls made by a process.
+Example: strace -p <PID> monitors the system calls of a running process.
