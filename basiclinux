@@ -1,0 +1,8 @@
+date
+cal
+3)pwd
+`pwd` stands for "print working directory." It's a command used in Unix-based operating systems like Linux to display the current directory or folder you are in within the file system hierarchy
+4)4.	Ls : The `ls` command in Linux (and Unix-based systems) is used to list directory contents. When you run `ls` without any arguments, it displays the files and directories in the current directory
+5)who
+6)whoami
+7)history
