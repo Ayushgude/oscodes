@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Prompt the user to enter the number of elements
+echo -n "Enter the number of elements in the array: "
+read n
+
+# Declare an array
+declare -a array
+
+# Input array elements
+echo "Enter the elements of the array:"
+for (( i=0; i<n; i++ ))
+do
+    read array[$i]
+done
+
+# Sort the array in descending order
+for (( i=0; i<n; i++ ))
+do
+    for (( j=i+1; j<n; j++ ))
+    do
+        if [ ${array[$i]} -lt ${array[$j]} ]
+        then
+            # Swap elements
+            temp=${array[$i]}
+            array[$i]=${array[$j]}
+            array[$j]=$temp
+        fi
+    done
+done
+
+# Display the sorted array
+echo "Array elements in descending order:"
+echo "${array[@]}"
